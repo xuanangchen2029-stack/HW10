@@ -12,10 +12,18 @@ ax,ay,button
 Example:
 0.123,-0.456,1
 
-The Python Pygame Zero program reads the serial data and controls a spaceship on the screen:
-- tilt left/right -> move ship left/right
-- tilt forward/back -> move ship up/down
-- press button -> change ship color
+## Game: Gravity Ball
+
+**Gravity Ball** is an interactive physics-based game controlled entirely by a Raspberry Pi Pico 2 microcontroller with an MPU6050 IMU and a pushbutton.
+
+The game renders a glowing neon ball inside a dark arena. Instead of a keyboard or mouse, the player physically tilts the Pico board to roll the ball — the IMU's accelerometer reads the tilt angle in real time and applies it as a gravitational force on the ball, which then accelerates, slides, and bounces off the walls with realistic physics. Tilt right and the ball rolls right; tilt forward and it climbs up the screen.
+
+Pressing the physical button triggers a particle explosion effect and cycles the ball through five neon color palettes — cyan, hot pink, green, gold, and violet.
+
+**Controls:**
+- Tilt left/right → roll ball left/right
+- Tilt forward/back → roll ball up/down
+- Press button → trigger explosion effect + cycle color
 
 ## Hardware wiring
 
@@ -57,5 +65,5 @@ The Python Pygame Zero program reads the serial data and controls a spaceship on
 Show:
 1. Pico connected to IMU and button
 2. Serial monitor printing data
-3. Pygame Zero window moving with board tilt
-4. Button changing the ship color
+3. Pygame Zero window with ball rolling in response to board tilt
+4. Button triggering explosion effect and color change
